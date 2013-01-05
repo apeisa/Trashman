@@ -27,7 +27,7 @@ class TrashmanWatchdog extends WireData implements Module {
 		return array(
 
 			'title' => 'Trashman Watchdog', 
-			'version' => 1, 
+			'version' => 100, 
 			'summary' => 'Autoload module, that saves the parent_before_trash value before page is trashed',
 			'href' => 'http://modules.processwire.com',
 			'singular' => true, 

@@ -29,7 +29,7 @@ class ProcessTrashman extends Process implements ConfigurableModule {
 
 			'title' => 'Trashman', 
 			'summary' => 'Custom trash view for clients also.', 
-			'version' => 1, 
+			'version' => 100, 
 			'author' => 'Antti Peisa', 
 			'href' => 'http://modules.processwire.com/', 
 			'permission' => 'trashman',
