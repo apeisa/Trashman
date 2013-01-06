@@ -165,7 +165,7 @@ class ProcessTrashman extends Process implements ConfigurableModule {
 					$p->children("include=all")->count(),
 					$parentPath,
 					$p->trashed,
-					"<a href='./restore/?page_id={$p->id}&parent_id={$p->oldParent->id}'>restore</a>"
+					"<a href='./restore/?page_id={$p->id}&parent_id={$p->oldParent->id}'>" . $this->_("restore") . "</a>"
 				));
 			}
 
