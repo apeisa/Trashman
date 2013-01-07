@@ -23,7 +23,7 @@ Trashman was installed. This is by design, since I want to have trashed date.
 GPL, just like [ProcessWire](https://github.com/ryancramerdesign/ProcessWire/blob/master/LICENSE.txt)
 
 ------
-Trashman Copyright 2013 by Antti Peisa 
+Trashman Copyright 2013 by Antti Peisa  
 [ProcessWire](http://processwire.com) Copyright 2013 by Ryan Cramer
 
 
