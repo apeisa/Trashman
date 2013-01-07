@@ -15,7 +15,8 @@ settings to set date formats for your liking.
 
 ## Please note
 
-Trashman doesn't allow viewing or restoring pages before it was installed.
+Trashman doesn't allow viewing or restoring pages that were trashed before 
+Trashman was installed. This is by design, since I want to have trashed date.
 
 ## Licence
 
