@@ -133,7 +133,6 @@ class ProcessTrashman extends Process implements ConfigurableModule {
 			$pagesInTrash->add($p);
 		}
 
-
 		// Render the form
 		$out .= $form->render();
 
@@ -141,6 +140,7 @@ class ProcessTrashman extends Process implements ConfigurableModule {
 		if ($pagesInTrash->count() == 0) {
 			$out .= $this->_("Pages not found");
 		} else {
+			
 			$table = $this->modules->get("MarkupAdminDataTable");
 			$table->setEncodeEntities(false);
 			$table->headerRow(array(
@@ -155,17 +155,21 @@ class ProcessTrashman extends Process implements ConfigurableModule {
 
 				if (!$p->oldParent->id || $p->oldParent->isTrash()) {
 					$parentPath = $this->_("unknown");
-					$p->oldParent->id = 0;
+					#$p->oldParent->id = 0; // causes page_id = 0 bug
+					$parent = 0;
 				}
-				else
+				else { 
 					$parentPath = $p->oldParent->path;
+					$parent = $p->oldParent->id;
+				}
+
 
 				$table->row(array(
 					$p->get("title|name"),
 					$p->children("include=all")->count(),
 					$parentPath,
 					$p->trashed,
-					"<a href='./restore/?page_id={$p->id}&parent_id={$p->oldParent->id}'>" . $this->_("restore") . "</a>"
+					"<a href='./restore/?page_id={$p->id}&parent_id={$parent}'>" . $this->_("restore") . "</a>"
 				));
 			}
 
